@@ -1899,7 +1899,7 @@
     position: relative;
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
-    background-image: url('images/hero.jpg');
+    background-image: url('images/desktop-hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1964,7 +1964,7 @@ body {
   
   .lorem-ipsum-dolor {
     width: 100%;
-    max-width: 35rem;
+    max-width: 40rem;
     position: relative;
     bottom: 0;
     padding: 1rem 0;
@@ -2277,4 +2277,9 @@ body {
     .freight-card {
       flex-basis: 100%;
     }
+  }
+
+  .our-reach {
+    text-align: center;
+    justify-content: center;
   }
