@@ -212,7 +212,7 @@
     padding: 13.25rem var(--padding-45xl) 15.187rem;
     box-sizing: border-box;
     gap: 4rem;
-    background-image: url(./public/header--5@3x.png);
+    background-image: url(images/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
