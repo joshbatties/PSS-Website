@@ -1896,6 +1896,28 @@
     }
   }
 
-
+  .header-5 {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above the header */
+  }
+  
+  /* Adjust the main content to start after the header */
+  .main-content {
+    position: relative;
+    z-index: 1;
+  }
 
   
