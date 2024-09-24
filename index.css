@@ -2091,7 +2091,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: 5rem 3rem;
     box-sizing: border-box;
     min-height: 100vh;
     position: relative;
@@ -2105,22 +2105,27 @@ body {
     margin: 0 auto;
   }
   
-  .hero-image-wrapper {
+  .hero-image-wrapper,
+  .lorem-ipsum-dolor,
+  .styleprimary-smallfalse-al-parent {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.5rem; /* Further reduced gap */
+    max-width: 50%;
+    align-self: flex-start;
+  }
+  
+  .hero-image-wrapper {
+    margin-bottom: 0; /* Removed the gap */
   }
   
   .image-removebg-preview-1-icon {
-    max-width: 50%;
+    width: 100%;
     height: auto;
+    display: block; /* Removes any potential inline spacing */
   }
   
   .lorem-ipsum-dolor {
-    max-width: 35rem;
-    margin-bottom: 1rem; /* Reduced gap before buttons */
-    position: static;
+    margin-top: 0.5rem; /* Added a small top margin to separate from image */
+    margin-bottom: 1rem;
   }
   
   .styleprimary-smallfalse-al-parent {
@@ -2142,32 +2147,26 @@ body {
       align-items: flex-start;
     }
   
-    .hero-image-wrapper {
-      justify-content: flex-start;
-      align-self: flex-start; /* Align image container to the left */
-    }
-  
-    .image-removebg-preview-1-icon {
-      align-self: flex-start; /* Align image to the left */
-    }
-  
     .lorem-ipsum-dolor {
       text-align: left;
-    }
-  
-    .styleprimary-smallfalse-al-parent {
-      justify-content: flex-start;
     }
   }
   
   /* Center on smaller screens */
   @media screen and (max-width: 767px) {
+    .header-5 {
+      padding: 3rem 1rem;
+    }
+  
     .hero-content {
       align-items: center;
     }
   
-    .hero-image-wrapper {
-      justify-content: center;
+    .hero-image-wrapper,
+    .lorem-ipsum-dolor,
+    .styleprimary-smallfalse-al-parent {
+      max-width: 100%;
+      align-self: center;
     }
   
     .lorem-ipsum-dolor {
@@ -2176,5 +2175,21 @@ body {
   
     .styleprimary-smallfalse-al-parent {
       justify-content: center;
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -6rem; /* Move the entire content block up */
+  }
+  
+  /* Adjust for smaller screens */
+  @media screen and (max-width: 768px) {
+    .hero-content {
+      margin-top: -4rem; /* Less movement on smaller screens */
     }
   }
