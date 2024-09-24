@@ -354,14 +354,14 @@
     overflow: hidden;
     object-fit: cover;
   }
-  .container1,
+  .freight-container,
   .services-section {
     align-self: stretch;
     display: flex;
     justify-content: flex-start;
     max-width: 100%;
   }
-  .container1 {
+  .freight-container {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -550,11 +550,11 @@
     max-width: 100%;
   }
   .heading4,
-  .placeholder-image-icon3 {
+.customs-clearance-icon {
     align-self: stretch;
     position: relative;
   }
-  .placeholder-image-icon3 {
+.customs-clearance-icon {
     height: 15rem;
     border-radius: var(--br-mini);
     max-width: 100%;
@@ -646,7 +646,7 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-  .placeholder-image-icon4 {
+  .brokerage-service-image {
     align-self: stretch;
     height: 15rem;
     position: relative;
@@ -937,7 +937,7 @@
     align-self: stretch;
     display: none;
   }
-  .layout-2401 {
+  .ship-spotlight-section {
     align-self: stretch;
     background-color: var(--background-color-primary);
     overflow: hidden;
@@ -985,12 +985,12 @@
     line-height: 150%;
   }
   .input,
-  .typedefault-alternatefalse {
+  .email-input {
     align-self: stretch;
     display: flex;
     justify-content: flex-start;
   }
-  .typedefault-alternatefalse {
+  .email-input {
     border: 1px solid var(--link-primary);
     outline: 0;
     background-color: transparent;
@@ -1146,7 +1146,7 @@
     align-items: flex-start;
     max-width: 100%;
   }
-  .content19 {
+  .contact-section-content {
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 0 10.062rem;
@@ -1155,11 +1155,11 @@
     min-width: 52.688rem;
   }
   .contact-9,
-  .container2 {
+  .contact-container {
     align-self: stretch;
     border-radius: var(--br-mini);
   }
-  .container2 {
+  .contact-container {
     flex-direction: row;
     justify-content: flex-start;
     gap: var(--gap-61xl);
@@ -1206,7 +1206,7 @@
     padding: 0;
     max-width: 100%;
   }
-  .typedefault-alternatefalse2 {
+  .newsletter-input{
     align-self: stretch;
     flex: 1;
     border-radius: var(--br-3xs);
@@ -1651,14 +1651,14 @@
       padding-bottom: 3.875rem;
       box-sizing: border-box;
     }
-    .content20 {
+    .contact-header-content {
       align-self: stretch;
       width: auto;
     }
-    .content19 {
+    .contact-section-content {
       flex: 1;
     }
-    .container2 {
+    .contact-container {
       flex-wrap: wrap;
     }
     .links,
@@ -1717,7 +1717,7 @@
     .placeholder-image-icon {
       min-width: 100%;
     }
-    .container1,
+    .freight-container,
     .services-section {
       gap: var(--gap-21xl);
     }
@@ -1749,7 +1749,7 @@
       padding-right: var(--padding-75xl);
       box-sizing: border-box;
     }
-    .layout-2401 {
+    .ship-spotlight-section {
       gap: var(--gap-21xl);
       padding: var(--padding-54xl) 14.375rem 5.688rem;
       box-sizing: border-box;
@@ -1758,12 +1758,12 @@
       font-size: var(--font-size-13xl);
       line-height: 2.375rem;
     }
-    .content19 {
+    .contact-section-content {
       padding-bottom: 6.563rem;
       box-sizing: border-box;
     }
     .contact-9,
-    .container2 {
+    .contact-container {
       gap: var(--gap-21xl);
     }
     .contact-9 {
@@ -1801,7 +1801,7 @@
       font-size: var(--text-regular-semi-bold-size);
       line-height: 1.5rem;
     }
-    .container1,
+    .freight-container,
     .services-section {
       gap: var(--gap-xl);
     }
@@ -1866,20 +1866,20 @@
     .freight-forwarding-section{
       gap: var(--gap-xl);
     }
-    .layout-2401,
+    .ship-spotlight-section,
     .ship-spotlight-wrapper {
       padding-left: var(--padding-xl);
       padding-right: var(--padding-xl);
       box-sizing: border-box;
     }
-    .layout-2401 {
+    .ship-spotlight-section {
       gap: var(--gap-xl);
     }
     .heading8 {
       font-size: var(--heading-desktop-h5-size);
       line-height: 1.813rem;
     }
-    .content19 {
+    .contact-section-content{
       gap: var(--gap-base);
       padding-bottom: 4.25rem;
       box-sizing: border-box;
