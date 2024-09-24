@@ -62,8 +62,7 @@
   }
   .primary-button-alt {
     border-radius: var(--br-3xs);
-    background-color: #02f;
-    border: 1px solid #0d67b5;
+    border: 2px solid white;
     flex-direction: row;
     justify-content: center;
     padding: 0.375rem 1.125rem;
@@ -1920,4 +1919,170 @@
     z-index: 1;
   }
 
+  /* General responsive adjustments */
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
   
+  .home-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar adjustments */
+  .navbar {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Header adjustments */
+  .header-5 {
+    padding: 5rem 1rem;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .hero-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .image-removebg-preview-1-icon {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .lorem-ipsum-dolor {
+    width: 100%;
+    max-width: 35rem;
+    position: relative;
+    bottom: 0;
+    padding: 1rem 0;
+  }
+  
+  /* Services section adjustments */
+  .services-section,
+  .freight-forwarding-section,
+  .ship-spotlight-section,
+  .contact-9,
+  .footer-1 {
+    padding: 3rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .freight-container,
+  .row,
+  .row1,
+  .row2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .content1,
+  .placeholder-image-icon,
+  .column1,
+  .column2,
+  .column3,
+  .column4,
+  .column5,
+  .column6 {
+    flex: 1 1 300px;
+    min-width: 0;
+    max-width: 100%;
+  }
+  
+  /* Ship spotlight adjustments */
+  .layout-240-child {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Contact section adjustments */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .placeholder-image-icon7,
+  .contact-section-content {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Form adjustments */
+  .form,
+  .input,
+  .input1,
+  .input2,
+  .alternatefalse {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Footer adjustments */
+  .content21 {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter,
+  .links {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Media queries for better responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar-content,
+    .actions {
+      width: 100%;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  
+    .styleprimary-smallfalse-al-parent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .heading,
+    .heading1,
+    .heading8 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+  
+    .contact-section-content {
+      padding-bottom: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .heading,
+    .heading1,
+    .heading8 {
+      font-size: 1.5rem;
+    }
+  
+    .form1 {
+      flex-direction: column;
+    }
+  
+    .newsletter-input,
+    .stylesecondary-smallfalse1 {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
