@@ -2086,3 +2086,95 @@ body {
       margin-top: 1rem;
     }
   }
+
+  .header-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .hero-image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem; /* Further reduced gap */
+  }
+  
+  .image-removebg-preview-1-icon {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .lorem-ipsum-dolor {
+    max-width: 35rem;
+    margin-bottom: 1rem; /* Reduced gap before buttons */
+    position: static;
+  }
+  
+  .styleprimary-smallfalse-al-parent {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .our-reach {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  /* Align left on larger screens */
+  @media screen and (min-width: 768px) {
+    .hero-content {
+      align-items: flex-start;
+    }
+  
+    .hero-image-wrapper {
+      justify-content: flex-start;
+      align-self: flex-start; /* Align image container to the left */
+    }
+  
+    .image-removebg-preview-1-icon {
+      align-self: flex-start; /* Align image to the left */
+    }
+  
+    .lorem-ipsum-dolor {
+      text-align: left;
+    }
+  
+    .styleprimary-smallfalse-al-parent {
+      justify-content: flex-start;
+    }
+  }
+  
+  /* Center on smaller screens */
+  @media screen and (max-width: 767px) {
+    .hero-content {
+      align-items: center;
+    }
+  
+    .hero-image-wrapper {
+      justify-content: center;
+    }
+  
+    .lorem-ipsum-dolor {
+      text-align: center;
+    }
+  
+    .styleprimary-smallfalse-al-parent {
+      justify-content: center;
+    }
+  }
