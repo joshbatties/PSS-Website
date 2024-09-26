@@ -2513,3 +2513,57 @@ body {
   color: var(--link-primary);
   opacity: 0.7; /* Adjust opacity as needed */
 }
+
+.contact-info-above-form {
+  display: flex;
+  flex-wrap: nowrap; /* Change to nowrap to keep items in one row */
+  justify-content: space-between;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.contact-info-above-form .contact-item {
+  flex: 1; /* Use flex: 1 to distribute space evenly */
+  display: flex;
+  align-items: center;
+  margin-right: 1em; /* Add space between items */
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.contact-info-above-form .contact-item:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.contact-info-above-form .contact-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.contact-info-above-form .contact-item p {
+  margin: 0;
+  font-size: 0.9em;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
+
+@media screen and (max-width: 980px) {
+  .contact-info-above-form {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .contact-info-above-form .contact-item {
+      flex-basis: calc(50% - 0.5em); /* Two items per row on medium screens */
+      margin-right: 0;
+      margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .contact-info-above-form .contact-item {
+      flex-basis: 100%; /* Full width on mobile screens */
+  }
+}
