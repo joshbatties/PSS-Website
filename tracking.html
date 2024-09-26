@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSS Container Tracking</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="navbar.css">
     <style>
+        :root {
+            --font-inter: 'Inter', sans-serif;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: var(--font-inter);
             line-height: 1.6;
             color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/ocean.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        .content-wrapper {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ecf0f1;
+            background-color: rgba(236, 240, 241, 0.8); /* Semi-transparent background */
         }
         h1, h2 {
-            color: #2980b9;
+            color: white;
             text-align: center;
         }
         form, #trackingResult, #customerSummary {
-            background-color: #ffffff;
+            background-color: #ffffffee;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
         }
         .form-section {
@@ -41,6 +56,7 @@
             margin-bottom: 5px;
         }
         input[type="text"] {
+            background-color: transparent;
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -163,14 +179,11 @@ header {
     margin-bottom: 20px;
 }
 
-#jpc-logo {
-    height: 4em; /* This makes the logo height match the text height */
-    margin-right: 15px; /* Adds some space between the logo and the text */
-}
 
 h1 {
-    color: #2980b9;
+    color: white;
     margin: 0; /* Removes default margins */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .separator {
@@ -219,7 +232,7 @@ th button:hover {
     </style>
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar" style="font-family: var(--font-inter);">
         <div class="container">
           <div class="navbar-content">
             <img class="color-dark" loading="lazy" alt="" src="images/logo2.png" />
@@ -242,10 +255,7 @@ th button:hover {
           </div>
         </div>
       </header>
-    <header>
-        <img src="images/jpc_logo.png" alt="JPC Logo" id="jpc-logo">
         <h1>Container Tracking</h1>
-    </header>
     <div id="inputError"></div>
     <form id="trackingForm" aria-label="Container Tracking Form">
         <div>
