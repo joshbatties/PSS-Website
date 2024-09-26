@@ -2280,15 +2280,25 @@ body {
   .contact-section {
     background-color: var(--background-color-primary);
     padding: 4rem 2rem;
-    font-family: var(--font-inter)
+    font-family: var(--font-inter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .contact-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
+    align-items: stretch; /* This ensures both columns stretch to the same height */
+  }
+  
+  .contact-content,
+  .contact-image {
+    display: flex;
+    flex-direction: column;
   }
   
   .contact-content {
@@ -2305,6 +2315,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    flex-grow: 1; /* This allows the form to grow and push the submit button to the bottom */
   }
   
   .form-group {
@@ -2325,11 +2336,13 @@ body {
   .form-group textarea {
     min-height: 150px;
     resize: vertical;
+    flex-grow: 1; /* This allows the textarea to grow and fill available space */
   }
   
   .form-actions {
     display: flex;
     gap: 1rem;
+    margin-top: auto; /* This pushes the buttons to the bottom of the form */
   }
   
   .submit-button,
@@ -2361,15 +2374,16 @@ body {
   
   .contact-image {
     grid-column: 2 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%; /* Ensure the image container takes full height */
+    border-radius: 10px; /* Adjust this value as needed for desired roundness */
+    overflow: hidden;
   }
   
   .contact-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
   
   @media screen and (max-width: 768px) {
@@ -2480,3 +2494,22 @@ body {
       font-size: 2rem; /* Smaller heading for mobile */
     }
   }
+
+  .form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--link-primary);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--link-primary);
+  background-color: transparent;
+  font-family: 'Inter', sans-serif; /* Add this line */
+}
+
+/* Add this new rule for the placeholder text */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+  color: var(--link-primary);
+  opacity: 0.7; /* Adjust opacity as needed */
+}
