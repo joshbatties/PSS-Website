@@ -125,7 +125,6 @@ body {
     padding: 1.406rem var(--padding-45xl) 1.312rem;
     top: 0;
     z-index: 99;
-    position: sticky;
     text-align: left;
     font-size: var(--text-regular-semi-bold-size);
     color: var(--background-color-primary);
