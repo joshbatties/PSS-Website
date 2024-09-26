@@ -343,7 +343,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 0 18.75rem;
     box-sizing: border-box;
   }
   .placeholder-image-icon {
@@ -1709,7 +1708,6 @@
       gap: var(--gap-base);
     }
     .content1 {
-      padding-bottom: 12.188rem;
       box-sizing: border-box;
     }
     .content1,
@@ -2401,4 +2399,84 @@ body {
     }
   }
   
- 
+  .services-section {
+    background-color: var(--background-color-primary);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 2rem; /* Reduced padding */
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--heading-desktop-h1-size);
+    color: var(--link-primary);
+    font-family: var(--text-small-normal);
+  }
+  
+  .freight-container {
+    width: 100%;
+    max-width: 1600px; /* Set a max-width for larger screens */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem; /* Reduced gap */
+  }
+  
+  .content1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 300px;
+  }
+  
+  .heading {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 1.5rem; /* Add some space below the heading */
+  }
+  
+  .row {
+    display: flex;
+    gap: 1.5rem; /* Reduced gap between list items */
+  }
+  
+  .list-item, .list-item1 {
+    flex: 1;
+  }
+  
+  .services-image {
+    width: 100%; /* Slightly increased width */
+    max-width: 800px; /* Increased max-width */
+    height: auto;
+    border-radius: var(--br-mini);
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .freight-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .services-image {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .services-section {
+      padding: 3rem 1rem; /* Further reduced padding for smaller screens */
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .heading {
+      font-size: 2rem; /* Smaller heading for mobile */
+    }
+  }
