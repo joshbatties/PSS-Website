@@ -2599,14 +2599,17 @@ body {
   gap: 1rem;
   margin-top: 1rem;
 }
+.input-button-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
 .newsletter-input {
-  width: 100%;
+  flex: 1;
   padding: 0.5rem;
 }
 .stylesecondary-smallfalse1 {
-  align-self: flex-start;
   padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
+  white-space: nowrap;
 }
 .by-subscribing-you {
   font-size: 0.8rem;
