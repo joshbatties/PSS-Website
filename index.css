@@ -2629,3 +2629,42 @@ body {
   }
 }
 
+.header-5 {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-image: url('images/desktop-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 13.25rem var(--padding-45xl) 15.187rem;
+  box-sizing: border-box;
+  gap: 4rem;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--text-regular-semi-bold-size);
+  color: var(--background-color-primary);
+  font-family: var(--font-inter);
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .header-5 {
+    background-image: url('images/mobile-hero.jpg');
+    padding: 5.625rem var(--padding-13xl) var(--padding-84xl);
+    gap: var(--gap-base);
+  }
+}
+
+/* Additional responsive adjustments */
+@media screen and (max-width: 450px) {
+  .header-5 {
+    padding-top: 5.625rem;
+    padding-bottom: var(--padding-84xl);
+  }
+}
