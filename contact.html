@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="contact.css">
     <style>
         .contact-container {
             max-width: 100%;
@@ -162,60 +163,61 @@
         </div>
 
 
-			<!-- Footer -->
-			<footer class="main-footer">
-				<div>
-					<img src="images/welder.png" alt="Company Logo">
-				</div>
-				<div>
-					<ul class="copyright">
-						<li>&copy; Ace Steel Innovations. All rights reserved.</li>
-					</ul>
-				</div>
-				<div>
-					<p>
-						Address: 1234 Steel Avenue, Metaltown, USA<br>
-						Phone: (123) 456-7890<br>
-						Email: info@acesteel.com
-					</p>
-				</div>
-			</footer>
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-            <script>
-                document.addEventListener('scroll', function() {
-                    const mainFooter = document.querySelector('.main-footer');
-                    const secondFooter = document.getElementById('secondFooter');
-                    const windowHeight = window.innerHeight;
-                    const mainFooterRect = mainFooter.getBoundingClientRect();
-                
-                    // Check if the user has scrolled to the bottom of the main footer
-                    if (mainFooterRect.top < windowHeight && mainFooterRect.bottom <= windowHeight) {
-                        // Add a wheel event listener to detect further scrolling down
-                        window.addEventListener('wheel', detectFurtherScroll);
-                    } else {
-                        secondFooter.classList.remove('show-footer');
-                        window.removeEventListener('wheel', detectFurtherScroll);
-                    }
-                });
-                
-                function detectFurtherScroll(event) {
-                    if (event.deltaY > 0) { // If the user scrolls down
-                        const secondFooter = document.getElementById('secondFooter');
-                        secondFooter.classList.add('show-footer');
-                        // Remove the event listener to prevent multiple triggers
-                        window.removeEventListener('wheel', detectFurtherScroll);
-                    }
-                }
-            </script>
-	</body>
-</html>
+        <footer class="footer-1">
+            <div class="content21">
+                <div class="newsletter">
+                    <img class="color-dark1" loading="lazy" alt="" src="images/logo.png" />
+                    <div class="join-our-newsletter">
+                        Stay up to date with our news by joining our newsletter.
+                    </div>
+                    <div class="actions1">
+                        <div class="form1">
+                            <div class="input-button-wrapper">
+                                <input class="newsletter-input" placeholder="Your email address" type="text" />
+                                <button type ="submit" class="stylesecondary-smallfalse1">
+                                    <div class="button11">Subscribe</div>
+                                </button>
+                            </div>
+                            <div class="by-subscribing-you">
+                                By subscribing, you agree to our Privacy Policy and to receive updates from our company.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="column7">
+                        <div class="column-one">Column One</div>
+                        <div class="footer-links">
+                            <div class="link3">Link One</div>
+                            <div class="link4">Link Two</div>
+                            <div class="link5">Link Three</div>
+                            <div class="link6">Link Four</div>
+                            <div class="link7">Link Five</div>
+                        </div>
+                    </div>
+                    <div class="column8">
+                        <div class="column-two">Column Two</div>
+                        <div class="footer-links1">
+                            <div class="link8">Link Six</div>
+                            <div class="link9">Link Seven</div>
+                            <div class="link10">Link Eight</div>
+                            <div class="link11">Link Nine</div>
+                            <div class="link12">Link Ten</div>
+                        </div>
+                    </div>
+                    <div class="column9">
+                        <div class="follow-us">Follow us</div>
+                        <div class="social-links">
+                            <div class="link13">Facebook</div>
+                            <div class="link14">Instagram</div>
+                            <div class="link15">Twitter</div>
+                            <div class="link16">LinkedIn</div>
+                            <div class="link17">YouTube</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+      </body>
+  </html>
