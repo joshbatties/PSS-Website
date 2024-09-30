@@ -149,3 +149,35 @@ body {
       justify-content: center;
     }
   }
+
+  .about-link-text, .tracking-link-text, .services-link-text, .button, .button1, .button2, .submit-button, .reset-button, .stylesecondary-smallfalse1 .button11, 
+  .primary-button-alt a, .primary-cta-button a, .stylesecondary-smallfalse a,
+  a[class$="-link-text"], a[class^="button"], button {
+      text-decoration: none !important;
+  }
+  
+  /* Ensure no underline on hover and focus */
+  .about-link-text:hover, .tracking-link-text:hover, .services-link-text:hover, .button:hover, .button1:hover, .button2:hover, .submit-button:hover, .reset-button:hover, .stylesecondary-smallfalse1 .button11:hover,
+  .primary-button-alt a:hover, .primary-cta-button a:hover, .stylesecondary-smallfalse a:hover,
+  a[class$="-link-text"]:hover, a[class^="button"]:hover, button:hover,
+  .about-link-text:focus, .tracking-link-text:focus, .services-link-text:focus, .button:focus, .button1:focus, .button2:focus, .submit-button:focus, .reset-button:focus, .stylesecondary-smallfalse1 .button11:focus,
+  .primary-button-alt a:focus, .primary-cta-button a:focus, .stylesecondary-smallfalse a:focus,
+  a[class$="-link-text"]:focus, a[class^="button"]:focus, button:focus {
+      text-decoration: none !important;
+  }
+
+  .about-link-text, .tracking-link-text, .services-link-text, .button, .button2, .submit-button, .reset-button, .stylesecondary-smallfalse1 .button11, 
+  .primary-button-alt a, .stylesecondary-smallfalse a,
+  a[class$="-link-text"], button {
+      color: white;
+  }
+  
+  /* Ensure no underline on hover and focus */
+  .about-link-text:hover, .tracking-link-text:hover, .services-link-text:hover, .button:hover, .button2:hover, .submit-button:hover, .reset-button:hover, .stylesecondary-smallfalse1 .button11:hover,
+  .primary-button-alt a:hover, .stylesecondary-smallfalse a:hover,
+  a[class$="-link-text"]:hover, button:hover,
+  .about-link-text:focus, .tracking-link-text:focus, .services-link-text:focus, .button:focus, .button1:focus, .button2:focus, .submit-button:focus, .reset-button:focus, .stylesecondary-smallfalse1 .button11:focus,
+  .primary-button-alt a:focus, .stylesecondary-smallfalse a:focus,
+  a[class$="-link-text"]:focus, button:focus {
+      color: white;
+  }
