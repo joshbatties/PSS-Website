@@ -171,7 +171,23 @@
     margin-bottom: 1rem; /* Adjust bottom margin as needed */
     margin-top: 10rem;    /* Moves the image down by 2rem */
   }
-} </style>
+} 
+.contact-image-wrapper {
+  border-radius: 15px; /* Rounded corners for the wrapper */
+  overflow: hidden;    /* Clip any overflow */
+  width: 100%;         /* Adjust to your preferred width */
+  height: auto;        /* Maintain aspect ratio */
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Contain the image within the wrapper */
+  display: block;
+  justify-items: center;
+}
+
+</style>
   </head>
 
   <body>
@@ -315,9 +331,11 @@
                   <input type="hidden" name="_template" value="table">
                 </form>
               </div>
-              <div class="contact-image">
+              <div class="contact-image-wrapper">
+              <div class="contact-image" style="border-radius: 15px;">
                 <img src="images/skyline.png" alt="Ship Spotlight">
               </div>
+            </div>
             </div>
           </section>
           
