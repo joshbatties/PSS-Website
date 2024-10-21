@@ -121,6 +121,44 @@ h1, h2 {
     font-size: 18px;
 }
 
+.timeline {
+    padding: 80px 0;
+    background-color: white;
+    position: relative;
+}
+
+.timeline .container {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.timeline-header {
+    flex: 1;
+    max-width: 576px;
+    margin-bottom: 80px;
+}
+
+/* Apply fixed positioning only for desktop */
+.timeline-header.desktop {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    align-self: flex-start;
+}
+
+.timeline-header p {
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.timeline-events {
+    flex: 1;
+    position: relative;
+}
+
 /* Routes Section */
 .routes {
     padding: 80px 0;
@@ -271,6 +309,27 @@ h1, h2 {
 
     .timeline-header, .timeline-events {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .timeline .container {
+        flex-direction: column;
+    }
+
+    .timeline-header, .timeline-events {
+        max-width: 100%;
+    }
+
+    /* Ensure the header is not sticky on mobile */
+    .timeline-header {
+        position: static;
+        height: auto;
+        align-self: auto;
+    }
+
+    .dot {
+        visibility: hidden;
     }
 }
 

@@ -152,25 +152,44 @@
             const timelineHeader = document.querySelector('.timeline-header');
             const timelineEvents = document.querySelector('.timeline-events');
             
+            const DESKTOP_THRESHOLD = 1024; // Minimum width in pixels for desktop layout
+            
+            function isDesktop() {
+                return window.innerWidth >= DESKTOP_THRESHOLD;
+            }
+            
+            function updateTimelineLayout() {
+                if (isDesktop()) {
+                    timelineHeader.classList.add('desktop');
+                } else {
+                    timelineHeader.classList.remove('desktop');
+                    timelineHeader.style.transform = 'translateY(0)';
+                }
+            }
+            
             function updateParallax() {
+                if (!isDesktop()) return;
+                
                 const rectHeader = timelineHeader.getBoundingClientRect();
                 const rectEvents = timelineEvents.getBoundingClientRect();
                 
                 const isInView = rectHeader.top <= 20 && rectEvents.bottom >= window.innerHeight;
 
                 if (isInView) {
-                    // When in the view, apply a parallax effect.
                     const scrollPercentage = (window.innerHeight - rectEvents.top) / (window.innerHeight + rectEvents.height);
-                    const translateY = (0.5 - scrollPercentage) * 100; // Adjust this multiplier to change the parallax intensity
+                    const translateY = (0.5 - scrollPercentage) * 100;
                     timelineHeader.style.transform = `translateY(${translateY}px)`;
                 } else {
-                    // Reset the transform when out of view
                     timelineHeader.style.transform = 'translateY(0)';
                 }
             }
 
             window.addEventListener('scroll', updateParallax);
-            window.addEventListener('resize', updateParallax);
+            window.addEventListener('resize', () => {
+                updateTimelineLayout();
+                updateParallax();
+            });
+            updateTimelineLayout(); // Initial call
             updateParallax(); // Initial call
         });
     </script>
