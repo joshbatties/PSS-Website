@@ -13,6 +13,84 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
+    <style>
+      .header-5 {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-image: url('images/desktop-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        box-sizing: border-box;
+        color: var(--background-color-primary);
+        font-family: var(--font-inter);
+      }
+
+      .hero-content {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10%; /* Adjust this value to position from the left as desired */
+      }
+
+      .image-removebg-preview-1-icon {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      .lorem-ipsum-dolor {
+        width: 100%;
+        max-width: 600px;
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        .header-5 {
+          background-image: url('images/mobile-hero.jpg');
+          padding: 1rem;
+        }
+
+        .hero-content {
+          max-width: 100%;
+          align-items: center;
+          margin-left: 0;
+        }
+
+        .image-removebg-preview-1-icon,
+        .lorem-ipsum-dolor {
+          max-width: 100%;
+        }
+
+        .lorem-ipsum-dolor {
+          text-align: center;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .cta-buttons button {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -20,7 +98,7 @@
       <header class="navbar">
         <div class="container">
           <div class="navbar-content">
-            <a href="index.html" class="logo"><img class="color-dark" loading="lazy" alt="" src="images/logo2.png" /></a>
+            <a href="index.html" class="logo"><img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo.png" /></a>
           </div>
           <nav class="column">
             <div class="about-link">
@@ -42,26 +120,23 @@
       </header>
 
       <section class="header-5">
-        <div class="hero-image-wrapper">
+        <div class="hero-content">
           <img
             class="image-removebg-preview-1-icon"
             loading="lazy"
-            alt=""
-            src="images/logo.png"
+            alt="Pacific Shipping Services Logo"
+            src="images/pss-logo-words.png"
           />
-        </div>
-        <div class="hero-content">
           <div class="lorem-ipsum-dolor">
             We deliver shipping solutions throughout the pacific to meet your logistics needs. With our extensive network and experience, we ensure that your cargo arrives safely and on time.
           </div>
-          <div class="styleprimary-smallfalse-al-parent">
+          <div class="cta-buttons">
             <button class="primary-cta-button">
               <a href="book.html" class="button1">Book a Shipment</a>
             </button>
-            <div class="frame-child"></div>
-            <div class="stylesecondary-smallfalse">
+            <button class="stylesecondary-smallfalse">
               <a href="tracking.html" class="button2">Track Cargo</a>
-            </div>
+            </button>
           </div>
         </div>
       </section>
