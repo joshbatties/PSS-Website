@@ -38,7 +38,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 10%; /* Adjust this value to position from the left as desired */
+        margin-left: 10%;
       }
 
       .image-removebg-preview-1-icon {
@@ -55,42 +55,123 @@
         margin-bottom: 2rem;
       }
 
-      .cta-buttons {
+      .styleprimary-smallfalse-al-parent {
         display: flex;
         gap: 1rem;
+        flex-wrap: nowrap;
+        width: 100%;
+      }
+
+      .primary-cta-button,
+      .stylesecondary-smallfalse {
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .primary-cta-button {
+        cursor: pointer;
+        border: 1px solid var(--background-color-primary);
+        padding: var(--padding-2xs-5) var(--padding-4xl);
+        background-color: var(--background-color-primary);
+        border-radius: var(--br-3xs);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .stylesecondary-smallfalse {
+        border-radius: var(--br-3xs);
+        border: 1px solid var(--color-gray);
+        padding: var(--padding-2xs-5) var(--padding-4xl);
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       @media screen and (max-width: 768px) {
         .header-5 {
           background-image: url('images/mobile-hero.jpg');
           padding: 1rem;
+          justify-content: flex-end;
         }
 
         .hero-content {
           max-width: 100%;
           align-items: center;
           margin-left: 0;
+          margin-bottom: 2rem;
         }
 
-        .image-removebg-preview-1-icon,
+        .image-removebg-preview-1-icon {
+          max-width: 100%;
+          margin-bottom: 2rem;
+        }
+
         .lorem-ipsum-dolor {
           max-width: 100%;
-        }
-
-        .lorem-ipsum-dolor {
           text-align: center;
+          margin-bottom: 2rem;
         }
 
-        .cta-buttons {
-          flex-direction: column;
-          width: 100%;
+        .styleprimary-smallfalse-al-parent {
+          justify-content: center;
         }
 
-        .cta-buttons button {
-          width: 100%;
-        }
+        
       }
-    </style>
+      @media screen and (max-width: 768px) {
+  .header-5 {
+    justify-content: space-between;
+  }
+
+  .hero-content {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .image-removebg-preview-1-icon {
+    margin-bottom: 0;
+  }
+
+  .text-and-buttons {
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-removebg-preview-1-icon {
+    max-height: 30vh; /* Limit image height on mobile */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-5 {
+    justify-content: flex-start;
+  }
+
+  .hero-content {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .text-and-buttons {
+    margin-top: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .image-removebg-preview-1-icon {
+    width: 100%;      /* Full width on mobile */
+    max-width: 400px; /* Or set a specific max width */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the entire image fits within the container */
+    margin-bottom: 1rem; /* Adjust bottom margin as needed */
+    margin-top: 10rem;    /* Moves the image down by 2rem */
+  }
+} </style>
   </head>
 
   <body>
@@ -127,16 +208,18 @@
             alt="Pacific Shipping Services Logo"
             src="images/pss-logo-words.png"
           />
+          <div class="text-and-buttons">
           <div class="lorem-ipsum-dolor">
             We deliver shipping solutions throughout the pacific to meet your logistics needs. With our extensive network and experience, we ensure that your cargo arrives safely and on time.
           </div>
-          <div class="cta-buttons">
+          <div class="styleprimary-smallfalse-al-parent">
             <button class="primary-cta-button">
               <a href="book.html" class="button1">Book a Shipment</a>
             </button>
-            <button class="stylesecondary-smallfalse">
-              <a href="tracking.html" class="button2">Track Cargo</a>
-            </button>
+            <div class="stylesecondary-smallfalse">
+              <a href="tracking.html" class="button2" style="font-weight: bold;">Track Cargo</a>
+            </div>
+          </div>
           </div>
         </div>
       </section>
