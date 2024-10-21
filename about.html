@@ -8,27 +8,52 @@
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="navbar.css">
+    <style>
+        .faq-cta {
+    text-align: center;
+}
+
+.primary-button-alt {
+    display: inline-block;
+}
+        .primary-button-alt {
+            border: 2px solid #0D67B5;
+            max-width: 4rem;
+        }
+
+        .button {
+            color: #0D67B5 !important;
+
+        }
+
+        .navbar {
+            border-bottom: 1px solid #0D67B5;
+        }
+        .about-link-text, .tracking-link-text, .services-link-text {
+            color: #0D67B5 !important;
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar" style="font-family: var(--font-inter);">
+    <header class="navbar">
         <div class="container">
           <div class="navbar-content">
-            <img class="color-dark" loading="lazy" alt="" src="images/logo2.png" />
+            <a href="index.html" class="logo"><img class="color-dark" loading="lazy" alt="" src="images/logo2.png" /></a>
           </div>
           <nav class="column">
             <div class="about-link">
-              <div class="about-link-text">About</div>
+              <a href="about.html" class="about-link-text">About</a>
             </div>
             <div class="tracking-link">
-              <div class="tracking-link-text">Tracking</div>
+              <a href="tracking.html" class="tracking-link-text">Tracking</a>
             </div>
             <div class="services-link">
-              <div class="services-link-text">Services</div>
+              <a href="services.html" class="services-link-text">Services</a>
             </div>
           </nav>
           <div class="actions">
             <div class="primary-button-alt">
-              <div class="button">Contact</div>
+              <a href="contact.html" class="button">Contact</a>
             </div>
           </div>
         </div>
@@ -127,7 +152,9 @@
                 <div class="faq-cta">
                     <h3>Still have questions?</h3>
                     <p>Contact us for more information.</p>
-                    <a href="#" class="button">Contact</a>
+                    <div class="primary-button-alt">
+                        <a href="contact.html" class="button">Contact</a>
+                    </div>
                 </div>
             </div>
         </section>
