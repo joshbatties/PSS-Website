@@ -40,96 +40,12 @@ h1, h2 {
 
 /* Timeline Section */
 .timeline {
-    padding: 80px 0;
     background-color: white;
     position: relative;
 }
 
 .timeline .container {
     display: flex;
-    gap: 80px;
-    align-items: flex-start;
-    position: relative;
-}
-
-.timeline-header {
-    flex: 1;
-    max-width: 576px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px;
-    height: fit-content;
-    align-self: flex-start;
-    margin-bottom: 80px;
-}
-
-.timeline-header p {
-    font-size: 18px;
-    margin-bottom: 32px;
-}
-
-.timeline-events {
-    flex: 1;
-    position: relative;
-}
-
-.timeline-event {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 40px;
-}
-
-.event-line {
-    width: 15px;
-    position: relative;
-}
-
-.event-line .line {
-    width: 3px;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    left: 6px;
-}
-
-.event-line .dot {
-    width: 15px;
-    height: 15px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 24px;
-}
-
-.event-content {
-    flex: 1;
-}
-
-.event-year {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
-.event-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 32px;
-}
-
-.event-content p {
-    font-size: 18px;
-}
-
-.timeline {
-    padding: 80px 0;
-    background-color: white;
-    position: relative;
-}
-
-.timeline .container {
-    display: flex;
-    gap: 80px;
     align-items: flex-start;
     position: relative;
 }
@@ -140,7 +56,6 @@ h1, h2 {
     margin-bottom: 80px;
 }
 
-/* Apply fixed positioning only for desktop */
 .timeline-header.desktop {
     position: -webkit-sticky;
     position: sticky;
@@ -159,6 +74,53 @@ h1, h2 {
     position: relative;
 }
 
+.timeline-line {
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    left: 7px;
+    width: 3px;
+    background-color: #000;
+}
+
+.timeline-event {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 60px;
+}
+
+.event-dot {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.event-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.event-year {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.event-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.event-content p {
+    font-size: 18px;
+}
 /* Routes Section */
 .routes {
     padding: 80px 0;
@@ -330,6 +292,53 @@ h1, h2 {
 
     .dot {
         visibility: hidden;
+    }
+}
+
+@media (max-width: 1024px) {
+    .timeline .container {
+        flex-direction: column;
+    }
+
+    .timeline-header, .timeline-events {
+        max-width: 100%;
+    }
+
+    .timeline-header {
+        position: static;
+        height: auto;
+        align-self: auto;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+
+    .timeline-event {
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .event-dot {
+        display: none;
+    }
+
+    .event-content {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .event-year {
+        font-size: 32px;
+    }
+
+    .event-content h3 {
+        font-size: 24px;
+    }
+
+    .event-content p {
+        font-size: 16px;
     }
 }
 
