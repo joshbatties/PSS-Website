@@ -530,6 +530,73 @@
   }
   
 }
+.primary-cta-button,
+.primary-button-alt,
+.submit-button,
+.reset-button, .stylesecondary-smallfalse1 {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stylesecondary-smallfalse1, .button11 {
+    color: black;
+}
+
+
+.primary-cta-button {
+    display: inline-flex;    /* Changed from flex */
+    white-space: nowrap;     /* Prevent text wrap */
+    padding: 0.75rem 1.5rem; /* Equal padding */
+    width: auto;             /* Auto width instead of 100% */
+    min-width: fit-content;  /* Ensure it fits content */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  /* Light default shadow */
+}
+
+.button1 {
+    white-space: nowrap;     /* Prevent text wrap */
+    width: auto;             /* Auto width */
+}
+
+.styleprimary-smallfalse-al-parent {
+    width: auto;
+    gap: 2rem;       /* Increased gap between buttons */
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure Track Cargo button has enough space */
+.stylesecondary-smallfalse {
+    min-width: max-content;  /* Ensure button fits text */
+    padding: 0.75rem 1.5rem; /* Match padding with Book Shipment */
+}
+
+/* Hover effects for primary buttons */
+.primary-cta-button:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effects for Contact button in nav */
+.primary-button-alt:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effects for Submit button in contact form */
+.submit-button:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.reset-button:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Newsletter subscribe button hover */
+.stylesecondary-smallfalse1:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
 
 </style>
   </head>

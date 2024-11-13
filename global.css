@@ -166,7 +166,7 @@ body {
       text-decoration: none !important;
   }
 
-  .about-link-text, .tracking-link-text, .services-link-text, .button, .button2, .submit-button, .reset-button, .stylesecondary-smallfalse1 .button11, 
+  .about-link-text, .tracking-link-text, .services-link-text, .button, .button2, .submit-button, .reset-button, 
   .primary-button-alt a, .stylesecondary-smallfalse a,
   a[class$="-link-text"], button {
       color: white;
