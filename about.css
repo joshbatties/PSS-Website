@@ -38,21 +38,26 @@ h1, h2 {
     height: auto;
 }
 
-/* Timeline Section */
 .timeline {
     background-color: white;
     position: relative;
+    padding: 80px 0;
 }
 
 .timeline .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
     display: flex;
     align-items: flex-start;
     position: relative;
+    gap: 60px;
 }
 
 .timeline-header {
     flex: 1;
-    max-width: 576px;
+    max-width: 50%;
+    padding: 0 40px;
     margin-bottom: 80px;
 }
 
@@ -123,7 +128,7 @@ h1, h2 {
 }
 /* Routes Section */
 .routes {
-    padding: 80px 0;
+    padding: 80px 0 0;
 }
 
 .routes .container {
@@ -245,6 +250,36 @@ h1, h2 {
         max-width: 100%;
     }
 
+    .timeline {
+        padding: 40px 0;
+    }
+
+    .timeline .container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .timeline-header {
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .timeline-events {
+        padding: 0;
+        width: 100%;
+    }
+
+    .timeline-header h2 {
+        font-size: 32px;
+    }
+
+    .timeline-header p {
+        font-size: 16px;
+    }
+
     .timeline-event {
         flex-direction: column;
     }
@@ -253,6 +288,7 @@ h1, h2 {
         margin-bottom: 10px;
     }
 }
+
 
 @media (max-width: 1024px) {
     .timeline .container {
@@ -462,4 +498,37 @@ h1, h2 {
     .hero-content p {
         display: none;
     }
+}
+
+
+/* FAQ Section */
+.faq {
+    padding: 40px 0 80px; /* Reduced top padding */
+}
+
+.faq-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-item .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active {
+    background-color: #0022FF;
+}
+
+.faq-item.active h3,
+.faq-item.active p {
+    color: white;
+}
+
+.faq-item.active .answer {
+    max-height: 200px; /* Adjust based on your content */
+    opacity: 1;
+    margin-top: 10px;
 }

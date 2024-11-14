@@ -162,7 +162,6 @@ body {
         <section class="routes">
             <div class="container">
                 <h2>Service Routes</h2>
-                <p>Providing reliable and efficient shipping services worldwide for over 20 years.</p>
                 <img class="services-image" loading="lazy" alt="Freight services illustration" src="images/service-area.png">
             </div>
         </section>
@@ -173,21 +172,47 @@ body {
                     <h2 class="faq-title">FAQs</h2>
                 </div>
                 <div class="faq-list">
-                    <div class="faq-item active">
+                    <div class="faq-item">
                         <h3>How can I track my shipment?</h3>
-                        <p>We provide a tracking service for all shipments. Once your order is dispatched, you'll receive a tracking number to monitor your cargo's progress online.</p>
+                        <div class="answer">
+                            <p>We provide a tracking service for all shipments. Once your order is dispatched, you'll receive a tracking number to monitor your cargo's progress online.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <h3>How do I get a shipping quote?</h3>
+                        <div class="answer">
+                            <p>You can get a shipping quote by filling out our online quote form, calling our customer service team, or sending us an email with your shipping details. We'll respond within 24 hours with a detailed quote.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <h3>What documents are required for international shipping?</h3>
+                        <h3>What is the estimated delivery time for my shipment?</h3>
+                        <div class="answer">
+                            <p>Delivery times vary depending on the destination, shipping method, and customs clearance. Enter your shipment details into our tracking page for our live estimates.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <h3>Do you offer insurance for my cargo?</h3>
+                        <div class="answer">
+                            <p>Yes, we offer comprehensive cargo insurance options to protect your shipments. Our team can help you select the right coverage based on your needs and cargo value.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <h3>Can I ship hazardous or restricted items?</h3>
+                        <div class="answer">
+                            <p>Yes certainly! It's important to note that hazardous materials require special handling and documentation. Please contact our team directly to discuss your specific requirements and we can accommodate your shipment.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I change the delivery address after dispatch?</h3>
+                        <div class="answer">
+                            <p>Changing the delivery address after dispatch is possible but may incur additional charges and could delay the delivery. Please contact our team as soon as possible to discuss the change.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How are customs duties and taxes calculated?</h3>
+                        <div class="answer">
+                            <p>Customs duties and taxes are based on the declared value of the goods, product classification, and destination country’s regulations. Our team can assist you in understanding potential fees for your shipment.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="faq-cta">
@@ -206,48 +231,100 @@ body {
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const timelineHeader = document.querySelector('.timeline-header');
-            const timelineEvents = document.querySelector('.timeline-events');
-            
-            const DESKTOP_THRESHOLD = 1024; // Minimum width in pixels for desktop layout
-            
-            function isDesktop() {
-                return window.innerWidth >= DESKTOP_THRESHOLD;
-            }
-            
-            function updateTimelineLayout() {
-                if (isDesktop()) {
-                    timelineHeader.classList.add('desktop');
-                } else {
-                    timelineHeader.classList.remove('desktop');
-                    timelineHeader.style.transform = 'translateY(0)';
-                }
-            }
-            
-            function updateParallax() {
-                if (!isDesktop()) return;
-                
-                const rectHeader = timelineHeader.getBoundingClientRect();
-                const rectEvents = timelineEvents.getBoundingClientRect();
-                
-                const isInView = rectHeader.top <= 20 && rectEvents.bottom >= window.innerHeight;
+    const timelineHeader = document.querySelector('.timeline-header');
+    const timelineEvents = document.querySelector('.timeline-events');
+    
+    const DESKTOP_THRESHOLD = 1024; // Minimum width in pixels for desktop layout
+    
+    // Add smooth transition to timeline header
+    timelineHeader.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    
+    function isDesktop() {
+        return window.innerWidth >= DESKTOP_THRESHOLD;
+    }
+    
+    function updateTimelineLayout() {
+        if (isDesktop()) {
+            timelineHeader.classList.add('desktop');
+        } else {
+            timelineHeader.classList.remove('desktop');
+            timelineHeader.style.transform = 'translateY(0)';
+        }
+    }
+    
+    function updateParallax() {
+        if (!isDesktop()) return;
+        
+        const rectHeader = timelineHeader.getBoundingClientRect();
+        const rectEvents = timelineEvents.getBoundingClientRect();
+        
+        // Adjust the scroll trigger points
+        const startTrigger = window.innerHeight;
+        const endTrigger = -rectEvents.height;
+        
+        // Calculate scroll position relative to the timeline section
+        const scrollPosition = rectEvents.top;
+        
+        // Calculate progress (0 to 1) based on scroll position
+        const progress = Math.max(0, Math.min(1, 
+            (startTrigger - scrollPosition) / (startTrigger - endTrigger)
+        ));
+        
+        // Create a smoother easing effect
+        const ease = t => t * (2 - t); // Quadratic ease-out
+        const easedProgress = ease(progress);
+        
+        // Apply a gentler translation
+        const maxTranslate = 60; // Reduced maximum translation
+        const translateY = maxTranslate * (1 - easedProgress * 2);
+        
+        // Only update if the section is in view
+        if (rectHeader.top <= startTrigger && rectEvents.bottom >= 0) {
+            timelineHeader.style.transform = `translateY(${translateY}px)`;
+        }
+    }
 
-                if (isInView) {
-                    const scrollPercentage = (window.innerHeight - rectEvents.top) / (window.innerHeight + rectEvents.height);
-                    const translateY = (0.5 - scrollPercentage) * 100;
-                    timelineHeader.style.transform = `translateY(${translateY}px)`;
-                } else {
-                    timelineHeader.style.transform = 'translateY(0)';
-                }
-            }
-
-            window.addEventListener('scroll', updateParallax);
-            window.addEventListener('resize', () => {
-                updateTimelineLayout();
+    // Use requestAnimationFrame for smoother updates
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
                 updateParallax();
+                ticking = false;
             });
-            updateTimelineLayout(); // Initial call
-            updateParallax(); // Initial call
+            ticking = true;
+        }
+    });
+    
+    window.addEventListener('resize', () => {
+        updateTimelineLayout();
+        updateParallax();
+    });
+    
+    updateTimelineLayout(); // Initial call
+    updateParallax(); // Initial call
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Check if this item is already active
+                    const isActive = item.classList.contains('active');
+                    
+                    // First remove active class from all items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Then add active class to clicked item (unless it was already active)
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
         });
     </script>
     <script src="navbar.js"></script>
