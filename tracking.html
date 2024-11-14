@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSS Container Tracking</title>
     <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="navbar2.css">
     <style>
         :root {
             --font-inter: 'Inter', sans-serif;
@@ -174,11 +174,6 @@ th, td {
     word-break: break-word; /* Allow long content to break */
 }
 
-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
 
 h1 {
@@ -233,47 +228,49 @@ th button:hover {
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-          <div class="navbar-content">
-            <a href="index.html" class="logo">
-              <img class="color-dark" loading="lazy" alt="Pacific Shipping Services" src="images/pss-only-logo.png" />
-            </a>
-            
-            <!-- Hamburger Menu Button -->
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-              <span class="hamburger"></span>
-            </button>
-            
-            <!-- Mobile Menu -->
-            <div class="mobile-menu">
-              <nav class="mobile-nav">
-                <a href="index.html" class="mobile-nav-link">Home</a>
-                <a href="about.html" class="mobile-nav-link">About</a>
-                <a href="tracking.html" class="mobile-nav-link">Tracking</a>
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div class="hero-container">
+        <header class="navbar">
+          <!-- Existing navbar content -->
+          <div class="container">
+            <div class="navbar-content">
+              <a href="index.html" class="logo">
+                <img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo-blue.png" />
+              </a>
+              
+              <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+              </button>
+              
+              <div class="mobile-menu">
+                <nav class="mobile-nav">
+                  <a href="index.html" class="mobile-nav-link">Home</a>
+                  <a href="about.html" class="mobile-nav-link">About</a>
+                  <a href="tracking.html" class="mobile-nav-link">Tracking</a>
+                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+                </nav>
+              </div>
+      
+              <nav class="desktop-nav">
+                <div class="about-link">
+                  <a href="about.html" class="about-link-text">About</a>
+                </div>
+                <div class="tracking-link">
+                  <a href="tracking.html" class="tracking-link-text">Tracking</a>
+                </div>
+                <div class="actions">
+                  <div class="primary-button-alt">
+                    <a href="contact.html" class="button">Contact</a>
+                  </div>
+                </div>
               </nav>
             </div>
-      
-            <!-- Desktop Menu -->
-            <nav class="desktop-nav">
-              <div class="about-link">
-                <a href="about.html" class="about-link-text">About</a>
-              </div>
-              <div class="tracking-link">
-                <a href="tracking.html" class="tracking-link-text">Tracking</a>
-              </div>
-              <div class="actions">
-                <div class="primary-button-alt">
-                  <a href="contact.html" class="button">Contact</a>
-                </div>
-              </div>
-            </nav>
           </div>
-        </div>
-        <div class="wipe-overlay"></div>
-      </header>
+          <div class="wipe-overlay"></div>
+          <div class="mobile-menu"></div>
+        </header>
       
+        <div class="hero-image"></div>
+      </div>
         <h1>Container Tracking</h1>
     <div id="inputError"></div>
     <form id="trackingForm" aria-label="Container Tracking Form">
@@ -310,5 +307,6 @@ th button:hover {
     <div id="pagination"></div>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="script.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
