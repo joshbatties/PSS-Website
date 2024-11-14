@@ -7,8 +7,22 @@
     <title>Pacific Shipping Services</title>
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="navbar2.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
     <style>
+        :root {
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: var(--font-inter);
+}
+
         .faq-cta {
     text-align: center;
 }
@@ -32,32 +46,59 @@
         .about-link-text, .tracking-link-text, .services-link-text {
             color: #0D67B5 !important;
         }
+
+
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-          <div class="navbar-content">
-            <a href="index.html" class="logo"><img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo-blue.png" /></a>
+    <div class="hero-container">
+        <header class="navbar">
+          <!-- Existing navbar content -->
+          <div class="container">
+            <div class="navbar-content">
+              <a href="index.html" class="logo">
+                <img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo-blue.png" />
+              </a>
+              
+              <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+              </button>
+              
+              <div class="mobile-menu">
+                <nav class="mobile-nav">
+                  <a href="index.html" class="mobile-nav-link">Home</a>
+                  <a href="about.html" class="mobile-nav-link">About</a>
+                  <a href="tracking.html" class="mobile-nav-link">Tracking</a>
+                  <a href="services.html" class="mobile-nav-link">Services</a>
+                  <a href="contact.html" class="mobile-nav-link">Contact</a>
+                </nav>
+              </div>
+      
+              <nav class="desktop-nav">
+                <div class="about-link">
+                  <a href="about.html" class="about-link-text">About</a>
+                </div>
+                <div class="tracking-link">
+                  <a href="tracking.html" class="tracking-link-text">Tracking</a>
+                </div>
+                <div class="services-link">
+                  <a href="services.html" class="services-link-text">Services</a>
+                </div>
+                <div class="actions">
+                  <div class="primary-button-alt">
+                    <a href="contact.html" class="button">Contact</a>
+                  </div>
+                </div>
+              </nav>
+            </div>
           </div>
-          <nav class="column">
-            <div class="about-link">
-              <a href="about.html" class="about-link-text">About</a>
-            </div>
-            <div class="tracking-link">
-              <a href="tracking.html" class="tracking-link-text">Tracking</a>
-            </div>
-            <div class="services-link">
-              <a href="services.html" class="services-link-text">Services</a>
-            </div>
-          </nav>
-          <div class="actions">
-            <div class="primary-button-alt">
-              <a href="contact.html" class="button">Contact</a>
-            </div>
-          </div>
-        </div>
-      </header>
+          <div class="wipe-overlay"></div>
+          <div class="mobile-menu"></div>
+        </header>
+      
+        <div class="hero-image"></div>
+      </div>
+      
 
     <main>
         <section class="hero">
@@ -68,7 +109,7 @@
                     <p>Our global network and industry knowledge allow us to navigate challenges and ensure timely delivery, keeping your business running smoothly.</p>
                 </div>
                 <div class="hero-image">
-                    <img src="https://via.placeholder.com/616x640" alt="Shipping illustration">
+                    <img src="images/port.jpg" alt="Shipping illustration">
                 </div>
             </div>
         </section>
@@ -208,5 +249,6 @@
             updateParallax(); // Initial call
         });
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>

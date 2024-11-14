@@ -10,9 +10,51 @@
 </head>
 <body>
     
-    <header>
-        <h1>Welcome to Your Website</h1>
-    </header>
+    <header class="navbar">
+        <div class="container">
+          <div class="navbar-content">
+            <a href="index.html" class="logo">
+              <img class="color-dark" loading="lazy" alt="Pacific Shipping Services" src="images/pss-only-logo.png" />
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+              <span class="hamburger"></span>
+            </button>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+              <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="tracking.html" class="mobile-nav-link">Tracking</a>
+                <a href="services.html" class="mobile-nav-link">Services</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+              </nav>
+            </div>
+      
+            <!-- Desktop Menu -->
+            <nav class="desktop-nav">
+              <div class="about-link">
+                <a href="about.html" class="about-link-text">About</a>
+              </div>
+              <div class="tracking-link">
+                <a href="tracking.html" class="tracking-link-text">Tracking</a>
+              </div>
+              <div class="services-link">
+                <a href="services.html" class="services-link-text">Services</a>
+              </div>
+              <div class="actions">
+                <div class="primary-button-alt">
+                  <a href="contact.html" class="button">Contact</a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="wipe-overlay"></div>
+      </header>
+      
 
     <main>
         <section>
