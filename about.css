@@ -421,7 +421,7 @@ h1, h2 {
         max-width: 100%;
         padding: 0 20px;
         position: absolute;
-        top: 75%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
@@ -442,12 +442,24 @@ h1, h2 {
 
 /* Add this to ensure the mobile hero content shows only "Connecting the Pacific" */
 @media (max-width: 768px) {
-    .hero-content h1::after {
+    .hero-content h1 {
+        font-size: 56px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 0;
+    }
+
+    .hero-content h1::before {
         content: "Connecting the Pacific";
+        visibility: visible;
         display: block;
     }
 
-    .hero-content h1 {
-        font-size: 0;  /* Hide original text */
+    .hero-content h1 span {
+        display: none;
+    }
+
+    .hero-content p {
+        display: none;
     }
 }
