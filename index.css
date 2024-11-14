@@ -1930,11 +1930,7 @@ body {
     overflow-x: hidden;
   }
   
-  /* Navbar adjustments */
-  .navbar {
-    width: 100%;
-    padding: 1rem;
-  }
+
   
   .container {
     flex-wrap: wrap;
