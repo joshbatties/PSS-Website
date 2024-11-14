@@ -367,7 +367,7 @@ h1, h2 {
 }
 
 .hero-content h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image {
@@ -431,7 +431,7 @@ h1, h2 {
     .hero-content h1 {
         font-size: 32px; /* Adjust size as needed */
         color: white; /* Assuming white text will stand out on the image */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Increased shadow for better readability */
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Increased shadow for better readability */
         margin: 0;
     }
 
@@ -445,7 +445,7 @@ h1, h2 {
     .hero-content h1 {
         font-size: 56px;
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
         margin: 0;
     }
 
