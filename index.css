@@ -2317,16 +2317,7 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
-  .form-group input,
-  .form-group textarea {
-    padding: 0.75rem;
-    border: 1px solid var(--link-primary);
-    border-radius: 4px;
-    font-size: 1rem;
-    color: var(--link-primary);
-    background-color: transparent;
-  }
+
   
   .form-group textarea {
     min-height: 150px;
@@ -2492,12 +2483,6 @@ body {
 
   .form-group input,
 .form-group textarea {
-  padding: 0.75rem;
-  border: 1px solid var(--link-primary);
-  border-radius: 4px;
-  font-size: 1rem;
-  color: var(--link-primary);
-  background-color: transparent;
   font-family: 'Inter', sans-serif; /* Add this line */
 }
 
