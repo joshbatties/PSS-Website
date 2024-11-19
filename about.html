@@ -49,7 +49,19 @@ body {
             color: #2980b9 !important;
         }
 
-
+/* Active states */
+.mobile-menu.active,
+.wipe-overlay.active {
+    transform: translateY(0);
+    transition-timing-function: ease-in;
+}
+  
+/* Closing animation */
+.mobile-menu:not(.active),
+.wipe-overlay:not(.active) {
+    transform: translateY(-100%);
+    transition-timing-function: ease-out;
+}
     </style>
 </head>
 <body>

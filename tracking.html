@@ -389,52 +389,186 @@ button:hover {
 h2 {
     color:black;
 }
+
+/* Mobile menu and overlay */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;  /* Changed to white background */
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 999;
+}
+
+.wipe-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-gray);
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 998;
+}
+
+/* Opening - wipes down */
+.mobile-menu.active,
+.wipe-overlay.active {
+    transform: translateY(0%);
+    transition-timing-function: ease-in;
+}
+
+/* Closing - wipes up */
+.mobile-menu:not(.active),
+.wipe-overlay:not(.active) {
+    transform: translateY(-100%);
+    transition-timing-function: ease-out;
+}
+
+/* Hide desktop nav on mobile */
+@media screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Hide mobile menu button on desktop */
+@media screen and (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* Mobile menu link styles */
+.mobile-nav-link {
+    font-size: 3rem;
+    color: #0D67B5;  /* Your blue color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Ensure content moves with menu */
+main, footer {
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+}
+
+/* Active states */
+.mobile-menu.active,
+.wipe-overlay.active {
+    transform: translateY(0);
+    transition-timing-function: ease-in;
+}
+  
+/* Closing animation */
+.mobile-menu:not(.active),
+.wipe-overlay:not(.active) {
+    transform: translateY(-100%);
+    transition-timing-function: ease-out;
+}
+
+.mobile-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mobile-menu-toggle.active .hamburger {
+    background-color: transparent !important;
+}
+
+.mobile-menu-toggle.active .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile menu link styles */
+.mobile-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Hamburger button styles */
+.mobile-menu-toggle.active .hamburger {
+    background: transparent !important;
+}
+
+.mobile-menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.navbar .container {
+    position: relative;
+}
     </style>
 </head>
 <body>
     <div class="hero-container">
         <header class="navbar">
-          <!-- Existing navbar content -->
-          <div class="container">
-            <div class="navbar-content">
-              <a href="index.html" class="logo">
-                <img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo-blue.png" />
-              </a>
-              
-              <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
-              </button>
-              
-              <div class="mobile-menu">
-                <nav class="mobile-nav">
-                  <a href="index.html" class="mobile-nav-link">Home</a>
-                  <a href="about.html" class="mobile-nav-link">About</a>
-                  <a href="tracking.html" class="mobile-nav-link">Tracking</a>
-                  <a href="contact.html" class="mobile-nav-link">Contact</a>
-                </nav>
-              </div>
-      
-              <nav class="desktop-nav">
-                <div class="about-link">
-                  <a href="about.html" class="about-link-text">About</a>
+            <div class="container">
+                <div class="navbar-content">
+                    <a href="index.html" class="logo">
+                        <img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo-blue.png" />
+                    </a>
+                    
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <div class="mobile-menu">
+                        <nav class="mobile-nav">
+                            <a href="index.html" class="mobile-nav-link">Home</a>
+                            <a href="about.html" class="mobile-nav-link">About</a>
+                            <a href="tracking.html" class="mobile-nav-link">Tracking</a>
+                            <a href="contact.html" class="mobile-nav-link">Contact</a>
+                        </nav>
+                    </div>
+        
+                    <nav class="desktop-nav">
+                        <div class="about-link">
+                            <a href="about.html" class="about-link-text">About</a>
+                        </div>
+                        <div class="tracking-link">
+                            <a href="tracking.html" class="tracking-link-text">Tracking</a>
+                        </div>
+                        <div class="actions">
+                            <div class="primary-button-alt">
+                                <a href="contact.html" class="button">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-                <div class="tracking-link">
-                  <a href="tracking.html" class="tracking-link-text">Tracking</a>
-                </div>
-                <div class="actions">
-                  <div class="primary-button-alt">
-                    <a href="contact.html" class="button">Contact</a>
-                  </div>
-                </div>
-              </nav>
             </div>
-          </div>
-          <div class="wipe-overlay"></div>
-          <div class="mobile-menu"></div>
+            <div class="wipe-overlay"></div>
         </header>
       
         <div class="hero-image"></div>
       </div>
+
+      <main>
     <div id="inputError"></div>
     <form id="trackingForm" aria-label="Container Tracking Form">
         <div>
@@ -469,8 +603,6 @@ h2 {
     <div id="customerSummary"></div>
     <div id="pagination"></div>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-    <script src="script.js"></script>
-    <script src="navbar.js"></script>
     <section class="service-cards">
         <div class="service-card">
             <img src="images/realtime-updates.jpg" alt="Real-Time Updates">
@@ -505,7 +637,7 @@ h2 {
             </div>
         </div>
     </section>
-
+</main>
     <footer class="footer">
         <div class="footer-content">
           <div class="footer-main">
@@ -588,5 +720,7 @@ h2 {
           </div>
         </div>
       </footer>
+        <script src="tracking.js"></script>
+        <script src="navbar.js"></script>
 </body>
 </html>

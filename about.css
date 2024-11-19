@@ -531,3 +531,7 @@ h1, h2 {
     opacity: 1;
     margin-top: 10px;
 }
+
+.mobile-menu {
+    background-image: url('images/mobile-menu.jpg');
+}

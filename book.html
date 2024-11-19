@@ -282,20 +282,6 @@
   transform: translateY(8px);
 }
 
-/* Mobile menu */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--color-gray);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
 .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -315,40 +301,6 @@
 
 .mobile-nav-link:hover {
   color: var(--link-primary);
-}
-
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  /* Active states for menu */
-  .mobile-menu.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .mobile-menu-toggle.active .hamburger {
-    background-color: transparent;
-  }
-
-  .mobile-menu-toggle.active .hamburger::before {
-    transform: rotate(45deg);
-  }
-
-  .mobile-menu-toggle.active .hamburger::after {
-    transform: rotate(-45deg);
-    transform-origin: center;
-  }
 }
 
 /* Navbar basics */
@@ -801,6 +753,74 @@ body {
         margin-top: 2rem;
     }
 }
+
+/* Hide desktop nav and show mobile menu button on mobile */
+@media screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Hide mobile menu button on desktop */
+@media screen and (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/mobile-menu.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 999;
+}
+
+.wipe-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-gray);
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 998;
+}
+
+/* Opening - wipes down */
+.mobile-menu.active,
+.wipe-overlay.active {
+    transform: translateY(0%);
+    transition-timing-function: ease-in;
+}
+
+/* Closing - wipes up */
+.mobile-menu:not(.active),
+.wipe-overlay:not(.active) {
+    transform: translateY(-100%);
+    transition-timing-function: ease-out;
+}
+
+.mobile-menu {
+    background-image: none;
+}
+
+.mobile-nav-link {
+
+    color: #2980b9;
+
+}
 </style>
   </head>
 
@@ -847,7 +867,7 @@ body {
         <div class="wipe-overlay"></div>
         <div class="mobile-menu"></div>
       </header>
-
+<main>
           <section class="contact-section">
             <div class="contact-container">
               <div class="contact-content">
@@ -968,7 +988,7 @@ body {
                   </div>
                 </div>
               </div>
-          
+            </main>
               <!-- Footer Bottom Section -->
               <div class="footer-bottom">
                 <div class="footer-divider"></div>
@@ -985,22 +1005,7 @@ body {
             </div>
           </footer>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const wipeOverlay = document.querySelector('.wipe-overlay');
-    
-    menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('active');
-        requestAnimationFrame(() => {
-            mobileMenu.classList.toggle('active');
-            wipeOverlay.classList.toggle('active');
-        });
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    });
-});
-</script>
+    <script src="navbar.js"></script>
       </body>
   </html>
    
