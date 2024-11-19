@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
         .contact-container {
             max-width: 100%;
@@ -181,61 +182,88 @@
         </div>
 
 
-        <footer class="footer-1">
-            <div class="content21">
-                <div class="newsletter">
-                    <img class="color-dark1" loading="lazy" alt="" src="images/logo.png" />
-                    <div class="join-our-newsletter">
-                        Stay up to date with our news by joining our newsletter.
-                    </div>
-                    <div class="actions1">
-                        <div class="form1">
-                            <div class="input-button-wrapper">
-                                <input class="newsletter-input" placeholder="Your email address" type="text" />
-                                <button type ="submit" class="stylesecondary-smallfalse1">
-                                    <div class="button11">Subscribe</div>
-                                </button>
-                            </div>
-                            <div class="by-subscribing-you">
-                                By subscribing, you agree to our Privacy Policy and to receive updates from our company.
-                            </div>
-                        </div>
-                    </div>
+        <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-main">
+                <!-- Logo Section -->
+                <div class="footer-logo">
+                  <a href="/">
+                    <img src="images/pss-logo-blue.png" alt="Pacific Shipping Services Logo" class="logo-image">
+                  </a>
                 </div>
-                <div class="links">
-                    <div class="column7">
-                        <div class="column-one">Column One</div>
-                        <div class="footer-links">
-                            <div class="link3">Link One</div>
-                            <div class="link4">Link Two</div>
-                            <div class="link5">Link Three</div>
-                            <div class="link6">Link Four</div>
-                            <div class="link7">Link Five</div>
-                        </div>
+          
+                <!-- Main Content Section -->
+                <div class="footer-columns">
+                  <!-- Navigation Section -->
+                  <div class="footer-column">
+                    <nav class="footer-nav">
+                      <a href="/about" class="nav-link">About</a>
+                      <a href="/contact" class="nav-link">Contact</a>
+                      <a href="/tracking" class="nav-link">Tracking</a>
+                    </nav>
+                    
+                    <!-- Contact Information -->
+                    <div class="footer-contact">
+                      <div class="contact-item">
+                        <img src="images/email.png" alt="Email Icon" class="contact-icon">
+                        <p class="contact-text"> sales@pacificshippingservices.com</p>
+                      </div>
+                      <div class="contact-item">
+                        <img src="images/telephone.png" alt="Phone Icon" class="contact-icon">
+                        <p class="contact-text">+61490292859</p>
+                      </div>
+                      <div class="contact-item">
+                        <img src="images/address.png" alt="Location Icon" class="contact-icon">
+                        <address class="contact-text">
+                          L16, 1 Collins Street, Melbourne, Victoria 3000
+                        </address>
+                      </div>
                     </div>
-                    <div class="column8">
-                        <div class="column-two">Column Two</div>
-                        <div class="footer-links1">
-                            <div class="link8">Link Six</div>
-                            <div class="link9">Link Seven</div>
-                            <div class="link10">Link Eight</div>
-                            <div class="link11">Link Nine</div>
-                            <div class="link12">Link Ten</div>
+                  </div>
+          
+                  <!-- Newsletter Section -->
+                  <div class="footer-column">
+                    <div class="footer-newsletter">
+                      <h2 class="newsletter-title">Subscribe to our Newsletter</h2>
+                      <form class="newsletter-form" action="/subscribe" method="POST">
+                        <div class="form-group">
+                          <div class="input-wrapper">
+                            <input 
+                              type="email" 
+                              placeholder="Your email address" 
+                              class="newsletter-input"
+                              required
+                            >
+                          </div>
+                          <button type="submit" class="newsletter-button">Subscribe</button>
                         </div>
-                    </div>
-                    <div class="column9">
-                        <div class="follow-us">Follow us</div>
-                        <div class="social-links">
-                            <div class="link13">Facebook</div>
-                            <div class="link14">Instagram</div>
-                            <div class="link15">Twitter</div>
-                            <div class="link16">LinkedIn</div>
-                            <div class="link17">YouTube</div>
+                        <div class="form-footer">
+                          <p class="privacy-text">
+                            By subscribing, you agree to our 
+                            <a href="/privacy" class="privacy-link">Privacy Policy</a>
+                          </p>
                         </div>
+                      </form>
                     </div>
+                  </div>
                 </div>
+              </div>
+          
+              <!-- Footer Bottom Section -->
+              <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="bottom-content">
+                  <div class="legal-links">
+                    <a href="/terms" class="legal-link">Terms of Service</a>
+                    <a href="/cookies" class="legal-link">Cookie Settings</a>
+                  </div>
+                  <p class="copyright">
+                    © 2024 Pacific Shipping Services. All rights reserved.
+                  </p>
+                </div>
+              </div>
             </div>
-        </footer>
+          </footer>
     </div>
       </body>
   </html>

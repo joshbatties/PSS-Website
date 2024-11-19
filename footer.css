@@ -311,3 +311,34 @@
   width: 100%;
   flex: 1;
 }
+
+.newsletter-input {
+  color: #000000;
+}
+
+.newsletter-input::placeholder {
+  color: #2980b9;
+}
+
+.newsletter-input::-webkit-input-placeholder {
+  color: #2980b9;
+}
+
+.newsletter-input::-moz-placeholder {
+  color: #2980b9;
+}
+
+.newsletter-input:-ms-input-placeholder {
+  color: #2980b9;
+}
+/* Add a dividing line above Footer Bottom Section */
+.footer-bottom {
+  margin-top: 48px;
+  border-top: 1px solid #2980b9;
+  padding-top: 24px;
+}
+
+/* We can remove the existing .footer-divider since we're using a border instead */
+.footer-divider {
+  display: none;
+}

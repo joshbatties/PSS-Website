@@ -1216,7 +1216,6 @@
     justify-content: flex-start;
     padding: var(--padding-3xs) var(--padding-4xs) var(--padding-3xs)
       var(--padding-xs);
-    max-width: calc(100% - 137px);
   }
   .button11 {
     position: relative;
