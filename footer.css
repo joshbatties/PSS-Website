@@ -1,6 +1,5 @@
 .footer {
   background-color: var(--semantic-background-color-primary);
-  font-family: "Roboto", Helvetica, sans-serif;
   width: 100%;
 }
 
@@ -340,4 +339,14 @@
 /* We can remove the existing .footer-divider since we're using a border instead */
 .footer-divider {
   display: none;
+}
+
+.newsletter-input {
+  align-self: stretch;
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
