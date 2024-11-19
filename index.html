@@ -646,8 +646,109 @@
     }
 }
 
+body {
+  font-family: var(--font-inter)
+} 
 
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
 
+#contact-form .input-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+#contact-form .form-group {
+  flex: 1;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid var(--link-primary);
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--link-primary);
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+#contact-form textarea {
+  border-radius: 25px;
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+  color: var(--link-primary);
+  opacity: 0.7;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus,
+#contact-form input:hover,
+#contact-form textarea:hover {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 0 1px #2980b9;
+}
+
+#contact-form .form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#contact-form .submit-button,
+#contact-form .reset-button {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: 2px solid var(--link-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-form .submit-button {
+  background-color: var(--link-primary);
+  color: var(--background-color-primary);
+}
+
+#contact-form .reset-button {
+  background-color: transparent;
+  color: var(--link-primary);
+}
+
+#contact-form .submit-button:hover,
+#contact-form .reset-button:hover {
+  border-color: #2980b9;
+  color: #2980b9;
+}
+
+@media screen and (max-width: 768px) {
+  #contact-form .input-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #contact-form .form-actions {
+    flex-direction: column;
+  }
+  
+  #contact-form .submit-button,
+  #contact-form .reset-button {
+    width: 100%;
+  }
+}
 </style>
   </head>
 
@@ -789,26 +890,28 @@
                       <p>1234 Steel Avenue, Metaltown, USA</p>
                   </div>
               </div>
-                <form action="https://formsubmit.co/e21af56276f202ce8918c6c09852f23d" method="POST" id="contact-form" class="contact-form">
+              <form action="https://formsubmit.co/e21af56276f202ce8918c6c09852f23d" method="POST" id="contact-form" class="contact-form">
+                <div class="input-row">
                   <div class="form-group">
                     <input type="text" name="name" id="name" placeholder="Name" required />
                   </div>
                   <div class="form-group">
                     <input type="email" name="email" id="email" placeholder="Email" required />
                   </div>
-                  <div class="form-group">
-                    <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
-                  </div>
-                  <div class="form-actions">
-                    <button type="submit" class="submit-button">Send Message</button>
-                    <button type="reset" class="reset-button">Reset Form</button>
-                  </div>
-                  <!-- Hidden inputs for FormSubmit configuration -->
-                  <input type="hidden" name="_next" value="index.html">
-                  <input type="hidden" name="_subject" value="New submission from PSS Website">
-                  <input type="hidden" name="_autoresponse" value="Thank you for your message. We will get back to you soon.">
-                  <input type="hidden" name="_template" value="table">
-                </form>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="submit-button">Send Message</button>
+                  <button type="reset" class="reset-button">Reset Form</button>
+                </div>
+                <!-- Hidden inputs for FormSubmit configuration -->
+                <input type="hidden" name="_next" value="index.html">
+                <input type="hidden" name="_subject" value="New submission from PSS Website">
+                <input type="hidden" name="_autoresponse" value="Thank you for your message. We will get back to you soon.">
+                <input type="hidden" name="_template" value="table">
+              </form>
               </div>
               <div class="contact-image-wrapper">
               <div class="contact-image" style="border-radius: 15px;">
