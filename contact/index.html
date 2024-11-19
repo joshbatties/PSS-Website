@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Book - PSS</title>
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <title>Contact - PSS</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../footer.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap"
@@ -710,17 +710,6 @@ body {
 }
 }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  background-color: #2980b9;  /* Your blue color */
-}
-
-/* Keep the color when menu is active */
-.mobile-menu-toggle.active .hamburger::before,
-.mobile-menu-toggle.active .hamburger::after {
-  background-color: #2980b9;  /* Your blue color */
-}
 
     .navbar {
             border-bottom: 1px solid #2980b9;
@@ -743,7 +732,18 @@ body {
 
         }
 
-        @media screen and (max-width: 768px) {
+        .hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: #2980b9;  /* Your blue color */
+}
+
+/* Keep the color when menu is active */
+.mobile-menu-toggle.active .hamburger::before,
+.mobile-menu-toggle.active .hamburger::after {
+  background-color: #2980b9;  /* Your blue color */
+}
+@media screen and (max-width: 768px) {
     .contact-container {
         display: flex;
         flex-direction: column;
@@ -754,7 +754,6 @@ body {
         margin-top: 2rem;
     }
 }
-
 /* Hide desktop nav and show mobile menu button on mobile */
 @media screen and (max-width: 768px) {
     .desktop-nav {
@@ -830,8 +829,8 @@ body {
       <header class="navbar">
         <div class="container">
           <div class="navbar-content">
-            <a href="index.html" class="logo">
-              <img class="color-dark" loading="lazy" alt="" src="images/pss-only-logo-blue.png" />
+            <a href="../index.html" class="logo">
+              <img class="color-dark" loading="lazy" alt="" src="../images/pss-only-logo-blue.png" />
             </a>
             
             <!-- Hamburger Menu Button -->
@@ -842,20 +841,20 @@ body {
             <!-- Mobile Menu Overlay -->
             <div class="mobile-menu">
               <nav class="mobile-nav">
-                <a href="index.html" class="mobile-nav-link">Home</a>
-                <a href="about.html" class="mobile-nav-link">About</a>
-                <a href="tracking.html" class="mobile-nav-link">Tracking</a>
-                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="../index.html" class="mobile-nav-link">Home</a>
+                <a href="../about/index.html" class="mobile-nav-link">About</a>
+                <a href="../tracking/index.html" class="mobile-nav-link">Tracking</a>
+                <a href="index.html" class="mobile-nav-link">Contact</a>
               </nav>
             </div>
       
             <!-- Desktop Menu -->
             <nav class="desktop-nav">
               <div class="about-link">
-                <a href="about.html" class="about-link-text">About</a>
+                <a href="../about/index.html" class="about-link-text">About</a>
               </div>
               <div class="tracking-link">
-                <a href="tracking.html" class="tracking-link-text">Tracking</a>
+                <a href="../tracking/index.html" class="tracking-link-text">Tracking</a>
               </div>
               <div class="actions">
                 <div class="primary-button-alt">
@@ -872,22 +871,22 @@ body {
           <section class="contact-section">
             <div class="contact-container">
               <div class="contact-content">
-                <h2 class="contact-heading">Book a shipment with us today.</h2>
+                <h2 class="contact-heading">Contact us today for all your shipping needs.</h2>
                 <div class="contact-info-above-form">
                   <div class="contact-item">
-                      <img src="images/email-pss-blue.png" alt="Email">
+                      <img src="../images/email-pss-blue.png" alt="Email">
                       <p>sales@pacificshippingservices.com</p>
                   </div>
                   <div class="contact-item">
-                      <img src="images/telephone-pss-blue.png" alt="Phone">
-                      <p>+61 490 262 859</p>
+                      <img src="../images/telephone-pss-blue.png" alt="Phone">
+                      <p>+61 490 292 859</p>
                   </div>
                   <div class="contact-item">
-                      <img src="images/time-management-pss-blue.png" alt="Hours">
+                      <img src="../images/time-management-pss-blue.png" alt="Hours">
                       <p>Mon-Fri: 9am-5pm</p>
                   </div>
                   <div class="contact-item">
-                      <img src="images/address-pss-blue.png" alt="Address">
+                      <img src="../images/address-pss-blue.png" alt="Address">
                       <p>L16, 1 Collins St, Melbourne, VIC 3000</p>
                   </div>
               </div>
@@ -916,8 +915,8 @@ body {
               </div>
               <div class="contact-image-wrapper">
               <div class="contact-image" style="border-radius: 15px;">
-                <img src="images/blue-lineart-ship.png" alt="Ship Spotlight">
-                <img src="images/blue-lineart-container2.png" alt="Ship Spotlight">
+                <img src="../images/blue-lineart-ship.png" alt="Ship Spotlight">
+                <img src="../images/blue-lineart-ship2.png" alt="Ship Spotlight">
               </div>
             </div>
             </div>
@@ -928,8 +927,8 @@ body {
               <div class="footer-main">
                 <!-- Logo Section -->
                 <div class="footer-logo">
-                  <a href="index.html">
-                    <img src="images/pss-logo-blue.png" alt="Pacific Shipping Services Logo" class="logo-image">
+                  <a href="../index.html">
+                    <img src="../images/pss-logo-blue.png" alt="Pacific Shipping Services Logo" class="logo-image">
                   </a>
                 </div>
           
@@ -938,23 +937,23 @@ body {
                   <!-- Navigation Section -->
                   <div class="footer-column">
                     <nav class="footer-nav">
-                      <a href="about.html" class="nav-link">About</a>
-                      <a href="contact.html" class="nav-link">Contact</a>
-                      <a href="tracking.html" class="nav-link">Tracking</a>
+                      <a href="../about/index.html" class="nav-link">About</a>
+                      <a href="index.html" class="nav-link">Contact</a>
+                      <a href="../tracking/index.html" class="nav-link">Tracking</a>
                     </nav>
                     
                     <!-- Contact Information -->
                     <div class="footer-contact">
                       <div class="contact-item">
-                        <img src="images/email.png" alt="Email Icon" class="contact-icon">
+                        <img src="../images/email.png" alt="Email Icon" class="contact-icon">
                         <p class="contact-text"> sales@pacificshippingservices.com</p>
                       </div>
                       <div class="contact-item">
-                        <img src="images/telephone.png" alt="Phone Icon" class="contact-icon">
+                        <img src="../images/telephone.png" alt="Phone Icon" class="contact-icon">
                         <p class="contact-text">+61 490 292 859</p>
                       </div>
                       <div class="contact-item">
-                        <img src="images/address.png" alt="Location Icon" class="contact-icon">
+                        <img src="../images/address.png" alt="Location Icon" class="contact-icon">
                         <address class="contact-text">
                           L16, 1 Collins Street, Melbourne, VIC 3000
                         </address>
@@ -1006,7 +1005,7 @@ body {
             </div>
           </footer>
     </div>
-    <script src="navbar.js"></script>
+    <script src="../navbar.js"></script>
       </body>
   </html>
    
