@@ -757,11 +757,11 @@ body {
 }
 }
 
-@media screen and (min-width: 769px) { 
+
     .navbar {
             border-bottom: 1px solid #2980b9;
         }
-}
+
         .about-link-text, .tracking-link-text, .services-link-text {
             color: #2980b9 !important;
         }
@@ -778,6 +778,29 @@ body {
             color: #2980b9 !important;
 
         }
+
+        .hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: #2980b9;  /* Your blue color */
+}
+
+/* Keep the color when menu is active */
+.mobile-menu-toggle.active .hamburger::before,
+.mobile-menu-toggle.active .hamburger::after {
+  background-color: #2980b9;  /* Your blue color */
+}
+@media screen and (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-image-wrapper {
+        order: 2;
+        margin-top: 2rem;
+    }
+}
 </style>
   </head>
 

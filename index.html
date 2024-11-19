@@ -756,6 +756,47 @@ body {
   padding: 12px 10px;
 }
 }
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-image-wrapper {
+        order: 2;
+        margin-top: 2rem;
+    }
+}
+.dual-image-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.dual-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .centered-image-section,
+  .dual-image-section {
+    padding: 2rem 1rem;
+  }
+
+  .dual-image-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .dual-image {
+    display: none
+  }}
+
 </style>
   </head>
 
@@ -922,9 +963,17 @@ body {
               </div>
               <div class="contact-image-wrapper">
               <div class="contact-image" style="border-radius: 15px;">
-                <img src="images/skyline.png" alt="Ship Spotlight">
+                <img src="images/blue-lineart-ship.png" alt="Ship Spotlight">
+                <img src="images/blue-lineart-container2.png" alt="Ship Spotlight">
               </div>
             </div>
+            </div>
+          </section>
+
+          <section class="dual-image-section">
+            <div class="dual-image-container">
+              <img src="images/blue-lineart-container.png" alt="Container Illustration" class="dual-image">
+              <img src="images/blue-lineart-ship2.png" alt="Ship Illustration" class="dual-image">
             </div>
           </section>
           

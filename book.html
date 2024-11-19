@@ -757,11 +757,22 @@ body {
 }
 }
 
-@media screen and (min-width: 769px) { 
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: #2980b9;  /* Your blue color */
+}
+
+/* Keep the color when menu is active */
+.mobile-menu-toggle.active .hamburger::before,
+.mobile-menu-toggle.active .hamburger::after {
+  background-color: #2980b9;  /* Your blue color */
+}
+
     .navbar {
             border-bottom: 1px solid #2980b9;
         }
-}
+
         .about-link-text, .tracking-link-text, .services-link-text {
             color: #2980b9 !important;
         }
@@ -778,6 +789,18 @@ body {
             color: #2980b9 !important;
 
         }
+
+        @media screen and (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-image-wrapper {
+        order: 2;
+        margin-top: 2rem;
+    }
+}
 </style>
   </head>
 
@@ -828,7 +851,7 @@ body {
           <section class="contact-section">
             <div class="contact-container">
               <div class="contact-content">
-                <h2 class="contact-heading">Contact us today for all your shipping needs.</h2>
+                <h2 class="contact-heading">Book a shipment with us today.</h2>
                 <div class="contact-info-above-form">
                   <div class="contact-item">
                       <img src="images/email-pss-blue.png" alt="Email">
