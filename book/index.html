@@ -822,6 +822,142 @@ body {
     color: #2980b9;
 
 }
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Global Heading Styles */
+h1, h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+    /* FAQ Section */
+.faq {
+    padding: 80px 0;
+}
+
+.faq .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.faq-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+}
+
+.faq-item.active {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.faq-cta {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.faq-cta h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.faq-cta p {
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 36px;
+    }
+}
+
+
+.primary-button-alt {
+    display: inline-block;
+}
+        .primary-button-alt {
+            border: 2px solid #2980b9;
+            max-width: 4rem;
+        }
+
+        .button {
+            color: #2980b9 !important;
+
+        }
+        .faq {
+    padding: 40px 0 80px; /* Reduced top padding */
+}
+
+.faq-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-item .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active {
+    background-color: #2980b9;
+}
+
+.faq-item.active h3,
+.faq-item.active p {
+    color: white;
+}
+
+.faq-item.active .answer {
+    max-height: 200px; /* Adjust based on your content */
+    opacity: 1;
+    margin-top: 10px;
+}
 </style>
   </head>
 
@@ -922,6 +1058,67 @@ body {
             </div>
             </div>
           </section>
+
+          <section class="faq">
+            <div class="container">
+                <div class="faq-header">
+                    <h2 class="faq-title">FAQs</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How can I contact your customer support?</h3>
+                        <div class="answer">
+                            <p>You can reach our customer support team via the contact form on this page, by phone, or through email. We aim to respond within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I make a booking?</h3>
+                        <div class="answer">
+                            <p>To make a booking, simply fill out the booking form on our website or call our team for assistance. Once confirmed, you'll receive a confirmation email with all the details.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What information do I need to provide for a booking?</h3>
+                        <div class="answer">
+                            <p>For bookings, we require details such as the type of shipment, dimensions, weight, origin, destination, and any special requirements. This ensures we provide accurate service and quotes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I reschedule or cancel my booking?</h3>
+                        <div class="answer">
+                            <p>Yes, bookings can be rescheduled or canceled. Please notify us as soon as possible. Cancellation or rescheduling fees may apply depending on the timing and service type.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you provide tracking details after booking?</h3>
+                        <div class="answer">
+                            <p>Yes, once your shipment is dispatched, we will provide you with a tracking number so you can monitor your cargo's progress in real time.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What payment methods do you accept for bookings?</h3>
+                        <div class="answer">
+                            <p>We accept major credit cards, bank transfers, and online payment platforms. Payment details will be provided once your booking is confirmed.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How can I get a shipping quote before booking?</h3>
+                        <div class="answer">
+                            <p>You can request a quote by filling out our online form, contacting us via email, or calling our team. Provide details about your shipment, and we'll respond promptly with a detailed quote.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-cta">
+                    <h3>Still have questions?</h3>
+                    <p>Contact us for more information.</p>
+                    <div class="primary-button-alt">
+                        <a href="../contact" class="button">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      </main>
           
           <footer class="footer">
             <div class="footer-content">
@@ -989,7 +1186,6 @@ body {
                   </div>
                 </div>
               </div>
-            </main>
               <!-- Footer Bottom Section -->
               <div class="footer-bottom">
                 <div class="footer-divider"></div>
@@ -1006,6 +1202,28 @@ body {
             </div>
           </footer>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const faqItems = document.querySelectorAll('.faq-item');
+          
+          faqItems.forEach(item => {
+              item.addEventListener('click', () => {
+                  // Check if this item is already active
+                  const isActive = item.classList.contains('active');
+                  
+                  // First remove active class from all items
+                  faqItems.forEach(otherItem => {
+                      otherItem.classList.remove('active');
+                  });
+                  
+                  // Then add active class to clicked item (unless it was already active)
+                  if (!isActive) {
+                      item.classList.add('active');
+                  }
+              });
+          });
+      });
+  </script>
     <script src="../navbar.js"></script>
       </body>
   </html>
