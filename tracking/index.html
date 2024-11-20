@@ -323,9 +323,11 @@ button:hover {
 }
 
 .service-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 150px;  /* Reduced from 100% */
+    height: 150px; /* Reduced from 200px */
+    object-fit: contain; /* Changed from cover to maintain aspect ratio */
+    margin: 20px auto; /* Centers the image and adds some spacing */
+    display: block; /* Helps with centering */
 }
 
 .service-card-content {
@@ -741,7 +743,7 @@ h1, h2 {
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <section class="service-cards">
         <div class="service-card">
-            <img src="../images/realtime-updates.jpg" alt="Real-Time Updates">
+            <img src="../images/fast-blue.png" alt="Real-Time Updates">
             <div class="service-card-content">
                 <h3>Real-Time Updates</h3>
                 <p>Stay updated with live tracking information</p>
@@ -749,7 +751,7 @@ h1, h2 {
         </div>
         
         <div class="service-card">
-            <img src="../images/global-tracking.jpg" alt="Global Tracking">
+            <img src="../images/global-blue.png" alt="Global Tracking">
             <div class="service-card-content">
                 <h3>Global Tracking</h3>
                 <p>Track your packages anywhere in the world</p>
@@ -757,7 +759,7 @@ h1, h2 {
         </div>
         
         <div class="service-card">
-            <img src="../images/24-7-availability.jpg" alt="24/7 Availability">
+            <img src="../images/24-hours-blue.png" alt="24/7 Availability">
             <div class="service-card-content">
                 <h3>24/7 Availability</h3>
                 <p>Access our tracking service and data anytime</p>
@@ -786,7 +788,7 @@ h1, h2 {
                 <div class="faq-item">
                     <h3>What do the tracking status updates mean?</h3>
                     <div class="answer">
-                        <p>Status updates indicate the current stage of your shipment, such as "Dispatched," "In Transit," "At Customs," or "Delivered." Detailed explanations can be found on our tracking page.</p>
+                        <p>Status updates indicate the current stage of your shipment, such as "Delivered," "In Transit," "At POD," "On Board Vessel," "Ready to Ship," and "Not ready to ship"</p>
                     </div>
                 </div>
                 <div class="faq-item">
