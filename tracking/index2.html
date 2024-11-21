@@ -17,12 +17,10 @@
         .form-container {
             margin: 20px auto;
             max-width: 600px;
-        }
-        label {
-            font-weight: bold;
+            text-align: center;
         }
         input[type="text"] {
-            width: 100%;
+            width: 80%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ddd;
@@ -43,26 +41,6 @@
             display: none;
             text-align: center;
             margin: 10px 0;
-        }
-        .loading span {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin: 0 2px;
-            background: #007bff;
-            animation: bounce 1s infinite alternate;
-        }
-        @keyframes bounce {
-            to {
-                opacity: 0.3;
-                transform: translateY(-20px);
-            }
-        }
-        .loading span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .loading span:nth-child(3) {
-            animation-delay: 0.4s;
         }
         .error-message {
             color: red;
@@ -86,23 +64,10 @@
 <body>
     <h1>PSS Cargo Tracking</h1>
     <div class="form-container">
-        <label for="trackingNumber">Enter Tracking Number:</label>
-        <input type="text" id="trackingNumber" placeholder="Enter tracking number">
-        <button id="trackShipmentBtn">Track Shipment</button>
-        <div id="trackingLoadingIndicator" class="loading">
-            <span></span><span></span><span></span>
-        </div>
-        <div id="trackingResult"></div>
-
-        <hr>
-
-        <label for="customerCode">Enter Customer Code:</label>
-        <input type="text" id="customerCode" placeholder="Enter customer code">
-        <button id="searchCustomerBtn">Search</button>
-        <div id="customerLoadingIndicator" class="loading">
-            <span></span><span></span><span></span>
-        </div>
-        <div id="customerSummary"></div>
+        <input type="text" id="searchInput" placeholder="Enter vessel name or voyage number">
+        <button id="searchBtn">Search</button>
+        <div id="loadingIndicator" class="loading">Loading...</div>
+        <div id="results"></div>
     </div>
     <script src="tracking.js"></script>
 </body>
